@@ -613,5 +613,33 @@ namespace System {
             result =  a%b;
             return a/b;
         }
-    }
+        
+        public static void multiples(int number)
+        {
+            int sizeX;
+            int sizeY;
+            
+            int [,] multiples = new int[sizeX, sizeY];
+            
+            int a = 1;
+            
+            for(int i = 0; i < sizeX; i++)
+            {
+                for(int j=0; j < sizeY; j++)
+                {
+                    multiples[i,j] = a*number;
+                    a+=1;
+                }
+            }
+
+            for(int i = 0; i < sizeX; i++)
+            {
+                for(int j = 0; j < sizeY; j++)
+                {
+                    Console.Write(multiples[i,j] + "\t");
+                }
+
+                Console.WriteLine();
+            }
+        }
 }
